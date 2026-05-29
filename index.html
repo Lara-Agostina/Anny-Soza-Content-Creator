@@ -3,87 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Profesional - Anny Soza</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="[URL_IMAGEN_PERFIL].png">
+    <title>Anny Soza Oficial</title>
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
 </head>
-<body>
+<body class="bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 text-gray-800 min-h-screen">
 
-    <header id="inicio">
-        <nav class="container">
-            <div class="logo">Anny Soza <span class="niche">| Avakin Content Creator</span></div>
-            <ul>
-                <li><a href="#biografia">Perfil</a></li>
-                <li><a href="#portafolio">Contenido</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <!-- Navegación -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-pink-100 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between md:justify-end items-center">
+            
+            <!-- Espaciador invisible a la izquierda solo en móvil para equilibrar el botón de hamburguesa -->
+            <div class="md:hidden w-6"></div>
+
+            <!-- Menú de Escritorio (Oculto en móviles) -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#sobre-mi" class="hover:text-pink-500 transition">Sobre mí</a>
+                <a href="#contenido" class="hover:text-pink-500 transition">Contenido</a>
+            </div>
+
+            <!-- Botón de Hamburguesa (Solo visible en móviles) -->
+            <button id="menu-btn" class="md:hidden text-gray-600 hover:text-pink-500 focus:outline-none transition" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-pink-100 absolute top-full left-0 w-full shadow-lg transition-all duration-300">
+            <div class="flex flex-col py-4 px-6 space-y-4 text-center font-medium text-gray-600">
+                <a href="#sobre-mi" class="mobile-link hover:text-pink-500 py-2 transition">Sobre mí</a>
+                <a href="#contenido" class="mobile-link hover:text-pink-500 py-2 transition">Contenido</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero / Presentación -->
+    <header class="max-w-5xl mx-auto px-6 pt-16 pb-20 text-center">
+        <div class="relative inline-block mb-6">
+            <img src="anny1.png" 
+                 alt="Foto de perfil" 
+                 class="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-xl ring-4 ring-pink-200">
+            <span class="absolute bottom-2 right-2 bg-pink-500 text-white text-xs px-2 py-0.5 rounded-full font-bold shadow">¡Hola!</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+            Soy <span class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">Anny Soza</span>
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Bienvenidos a mi espacio digital. Aquí comparto mi visión, mis proyectos artísticos y el contenido que creo día a día para mis comunidades de YouTube y TikTok.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#contenido" class="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-pink-200 hover:scale-105 transition-all">
+                Ver mi contenido
+            </a>
+        </div>
     </header>
 
-    <section class="hero-section" style="background-image: url('[URL_IMAGEN_OTOÑO_OSCURECIDA].jpg');">
-        <div class="hero-overlay">
-            <img src="anny1.png" alt="Anny Soza Avatar" class="hero-avatar">
-            <h1>Anny Soza: Creadora de Contenido Profesional</h1>
-            <p>Especializada en <strong>Avakin Life, Guías y Lifestyle</strong>. Conectando con una comunidad activa de <strong>10.8k</strong> seguidores.</p>
-            <a href="#portafolio" class="cta-button primary-btn">VER MI TRABAJO DESTACADO</a>
+    <!-- Sección: Sobre Mí -->
+    <section id="sobre-mi" class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-pink-50/50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-pink-100 rounded-full blur-3xl -z-10 opacity-60"></div>
+            <div class="max-w-3xl">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                    <span class="p-2 bg-pink-100 rounded-xl text-pink-500 text-xl"><i class="fa-solid fa-sparkles"></i></span>
+                    Sobre Mí
+                </h2>
+                <div class="space-y-4 text-gray-600 leading-relaxed text-base md:text-lg">
+                    <p>
+                        ¡Hola! Soy creadora de contenido y apasionada por el arte visual y el diseño. Me encanta explorar nuevas formas de expresión y canalizar toda esa energía en videos, fotografía y proyectos digitales llenos de vida y color.
+                    </p>
+                    <p>
+                        Mi objetivo es inspirar a otros a través de la creatividad, demostrando que el diseño y la producción de contenido son las mejores herramientas para conectar de manera auténtica con las personas. Cuando no estoy editando un video o planeando mi próximo feed, seguro me encontrarás explorando paisajes o buscando nuevas fuentes de inspiración.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="biografia" class="container">
-        <h2>✨ ¿Quién es Anny Soza?</h2>
-        <div class="bio-text">
-            <p>Soy <strong>Anny Henderson</strong>, enfocada en la creación de contenido que entretiene, educa y conecta a la comunidad de Avakin Life. </p>
-            
-            <h3>Mi Enfoque</h3>
-            <ul>
-                <li><strong>Nichos:</strong> Avakin Life Gaming, Guías de Eventos y Tendencias de Moda Virtual.</li>
-                <li><strong>Plataformas:</strong> Instagram, YouTube y TikTok (Enlaces directos en Contacto).</li>
-                <li><strong>Diferenciador:</strong> Estilo definido, producción de videos de alta calidad y un alto índice de <strong>engagement</strong> con mi audiencia.</li>
-            </ul>
+    <!-- Sección: Contenido (YouTube & TikTok) -->
+    <section id="contenido" class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">Mis Canales de Contenido</h2>
+            <p class="text-gray-500">Explora lo que comparto en mis redes principales</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Tarjeta YouTube -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="p-4 bg-red-50 text-red-500 rounded-2xl text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-youtube"></i>
+                        </span>
+                        <span class="text-xs font-semibold bg-red-50 text-red-600 px-3 py-1 rounded-full">YouTube</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Mi Canal Principal</h3>
+                    <p class="text-gray-600 mb-6">
+                        Aquí subo vlogs, procesos creativos detallados, tutoriales y todo el contenido en formato horizontal donde profundizo en mis pasiones artísticas.
+                    </p>
+                </div>
+                <a href="https://www.youtube.com/@annysozaoficial" target="_blank" class="w-full bg-red-500 hover:bg-red-600 text-white text-center py-3 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                    Suscribirse <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Tarjeta TikTok -->
+            <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-md hover:shadow-xl transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="flex items-center justify-between mb-6">
+                        <span class="p-4 bg-gray-50 text-gray-900 rounded-2xl text-2xl group-hover:scale-110 transition-transform">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </span>
+                        <span class="text-xs font-semibold bg-gray-100 text-gray-800 px-3 py-1 rounded-full">TikTok</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Videos Cortos y Tendencias</h3>
+                    <p class="text-gray-600 mb-6">
+                        El espacio para el contenido dinámico, transiciones creativas, el detrás de escena del día a día y formatos rápidos con mucha edición y color.
+                    </p>
+                </div>
+                <a href="https://www.tiktok.com/@annysozaoficial" target="_blank" class="w-full bg-gray-900 hover:bg-black text-white text-center py-3 rounded-2xl font-semibold flex items-center justify-center gap-2 transition-colors">
+                    Seguir en TikTok <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="portafolio" class="container dark-section">
-        <h2>Portafolio: Mis Contenidos de Mayor Impacto</h2>
-        <p>Una muestra de mis mejores trabajos en video y contenido generado para la comunidad.</p>
-        <div class="content-grid">
-            <div class="video-item">
-                <h3>Última Guía de Evento (YouTube)</h3>
-                <iframe width="100%" height="315" src="[URL_DEL_VIDEO_AVAKIN_DESTACADO_1]" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="video-item">
-                <h3>Tendencias de Moda Virtual (YouTube/TikTok)</h3>
-                <iframe width="100%" height="315" src="[URL_DEL_VIDEO_AVAKIN_DESTACADO_2]" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
-            </div>
-        
-        <p class="cta-follow">¿Quieres ver más? Visita mi <a href="https://youtube.com/@annysozaoficial" target="_blank" class="text-link">Canal Oficial de YouTube.</a></p>
-    </section>
-
-    <section id="contacto" class="container">
-        <h2>¿Listo para Colaborar?</h2>
-        <p>Disponible para consultas de prensa, patrocinios y colaboraciones profesionales. Contáctame directamente o a través de mis redes.</p>
-        
-        <form class="contact-form">
-            <input type="text" placeholder="Tu Nombre o Empresa" required>
-            <input type="email" placeholder="Correo Electrónico de Contacto" required>
-            <textarea placeholder="Detalla tu propuesta o consulta." rows="5" required></textarea>
-            <button type="submit" class="cta-button primary-btn">Enviar Propuesta</button>
-        </form>
-
-        <div class="social-links-pro">
-            <a href="https://www.instagram.com/annysozaoficial" target="_blank" class="social-icon instagram-pro">Instagram</a>
-            <a href="https://youtube.com/@annysozaoficial" target="_blank" class="social-icon youtube-pro">YouTube</a>
-            <a href="https://www.tiktok.com/@annysozaoficial" target="_blank" class="social-icon tiktok-pro">TikTok</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Anny Soza. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-pink-50 py-8 text-center text-sm text-gray-400">
+        <p>&copy; 2026 Anny Soza Oficial. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Script para controlar el Menú de Hamburguesa -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // Alternar el menú al hacer clic en el botón de hamburguesa
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar el menú automáticamente al hacer clic en cualquier enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
 </body>
 </html>
